@@ -1,0 +1,26 @@
+# video-downloader skill —— 核心依赖（必装）
+# 安装目标：WorkBuddy 隔离 venv（默认 ~/.workbuddy/binaries/python/envs/default）
+#
+# 抖音「真实 Chrome 无头」路线只需 playwright(python 包) + 本机已装的 Chrome，
+# 不需要下载 Playwright 自带的浏览器，也不需要 torch。
+# 转写口播(ASR)属于可选功能，依赖见 requirements-extra.txt。
+
+# 核心下载（yt-dlp 兜底与 H5 路由）
+yt-dlp>=2026.8.19
+
+# 真实 Chrome 路线（仅 python 包；用 executable_path 指向系统 Chrome）
+playwright>=1.65.0
+
+# 抖音 H5 / 游客态辅助解析（轻量，建议装）
+httpx>=0.28.0
+pydantic>=2.14.0
+PyYAML>=6.0.0
+gmssl>=3.2.0
+browser-cookie3>=0.20.0
+rich>=15.0.0
+requests>=2.31.0
+certifi>=2024.0.0
+tqdm>=4.66.0
+
+# ffmpeg 二进制（供 whisper 转写 / yt-dlp 合并使用，装了不吃亏）
+imageio-ffmpeg>=0.5.0

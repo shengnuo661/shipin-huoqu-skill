@@ -1,0 +1,6 @@
+# video-downloader skill —— 可选依赖（仅「口播转写 ASR」需要）
+# 安装：pip install -r requirements-extra.txt
+# 不转写口播、只下视频+文案，则无需安装，可跳过。
+numpy>=2.0.0
+torch>=2.13.0
+openai-whisper>=20250625
